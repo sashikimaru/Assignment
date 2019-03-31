@@ -1,7 +1,7 @@
 function setup() {
   createCanvas(500, 500);
 }
-let value = 100;
+var value = 100;
 function draw() {
   //over
   background(21,1,77);
