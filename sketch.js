@@ -2,9 +2,27 @@ function setup() {
   createCanvas(500, 500);
 }
 var value = 100;
+var x = -60;
+var y = 0;
+
 function draw() {
   //over
   background(21,1,77);
+  
+  if(x<=0){
+    y = 60;
+    x=x+1;
+  } 
+    if(0<x<=550){
+    y = pow(-(x-380), -2)+60;
+    x = x + 1;
+    //print(x);
+  }
+  if (x>550){x = -60;}
+  fill(65,value+71,0);
+  circle(x , y, 25);
+  //circle(380,55.5,25),
+  
   //noStroke();
   fill(6,value-33,1);
   rect(0, 340 , 500, 340);
@@ -42,8 +60,7 @@ function draw() {
   rect(360, 80, 80, 260);
   rect(360, 0,80, 30);
   
-  fill(65,value+71,0);
-  circle(380,55.5,25),
+ 
     
   fill(value+16,0,125);
   triangle(440,80,440,340,800,340);
